@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <title>CheatSheet Template</title>
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="cs3.png"></span>
+        <div class="content center">
+           <b> Python CheatSheet</b>
+        </div>
+    </nav>
+    <div class="container">
+        <ol>
+            <li><b>Write a Python Program of hello world!</b>
+                <pre class="language-python"><code>print("Hello, World!")</code></pre>
+            </li>
+            <li><b>Python program to do arithmetical operations</b>
+                <pre class="language-python"><code># Store input numbers:  
+num1 = input('Enter first number: ')  
+num2 = input('Enter second number: ')  
+    
+# Add two numbers  
+sum = float(num1) + float(num2)  
+# Subtract two numbers  
+min = float(num1) - float(num2)  
+# Multiply two numbers  
+mul = float(num1) * float(num2)  
+#Divide two numbers  
+div = float(num1) / float(num2)  
+# Display the sum  
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))  
+    
+# Display the subtraction  
+print('The subtraction of {0} and {1} is {2}'.format(num1, num2, min))  
+# Display the multiplication  
+print('The multiplication of {0} and {1} is {2}'.format(num1, num2, mul))  
+# Display the division  
+print('The division of {0} and {1} is {2}'.format(num1, num2, div))</code></pre>
+            </li>
+            <li><b>Python program to find the area of a triangle</b>
+                <pre class="language-python"><code># Three sides of the triangle is a, b and c:  
+a = float(input('Enter first side: '))  
+b = float(input('Enter second side: '))  
+c = float(input('Enter third side: '))  
+    
+# calculate the semi-perimeter  
+s = (a + b + c) / 2  
+    
+# calculate the area  
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5  
+print('The area of the triangle is %0.2f' %area)</code></pre>
+            </li>
+            <li><b>Python program to solve quadratic equation</b>
+                <pre class="language-python"><code># import complex math module  
+import cmath  
+a = float(input('Enter a: '))  
+b = float(input('Enter b: '))  
+c = float(input('Enter c: '))  
+    
+# calculate the discriminant  
+d = (b**2) - (4*a*c)  
+    
+# find two solutions  
+sol1 = (-b-cmath.sqrt(d))/(2*a)  
+sol2 = (-b+cmath.sqrt(d))/(2*a)  
+print('The solution are {0} and {1}'.format(sol1,sol2))</code></pre>
+            </li>
+            <li><b>Python program to swap two variables</b>
+                <pre class="language-python"><code>P = int( input("Please enter value for P: "))  
+Q = int( input("Please enter value for Q: "))  
+    
+# To swap the value of two variables  
+# we will user third variable which is a temporary variable  
+temp_1 = P  
+P = Q  
+Q = temp_1  
+    
+print ("The Value of P after swapping: ", P)  
+print ("The Value of Q after swapping: ", Q)</code></pre>
+            </li>
+            <li><b>Python program to generate a random number</b>
+                <pre class="language-python"><code>import random  
+n = random.randint(100, 200)  
+print(n) 
+
+(OR)
+
+import random  
+rand_list = []  
+for i in range(0,10):  
+n = random.randint(1,50)  
+rand_list.append(n)  
+print(rand_list)</code></pre>
+            </li>
+            <li><b>Python program to convert kilometers to miles</b>
+                <pre class="language-python"><code>def kilometre_1(km):  
+conversion_ratio_1= 0.621371  
+miles_1 = km * conversion_ratio_1  
+print ("The speed value of car in Miles: ", miles_1)  
+km = float (input ("Please enter the speed of car in Kilometre as a unit: "))  
+kilometre_1(km)</code></pre>
+            </li>
+            <li><b>Python program to convert Celsius to Fahrenheit</b>
+                <pre class="language-python"><code>celsius_1 = float(input("Temperature value in degree Celsius: " ))  
+  
+# For Converting the temperature to degree Fahrenheit by using the above  
+# given formula  
+Fahrenheit_1 = (celsius_1 * 1.8) + 32  
+    
+# print the result  
+print('The %.2f degree Celsius is equal to: %.2f Fahrenheit'  
+        %(celsius_1, Fahrenheit_1))  
+    
+print("----OR----")  
+celsius_2 = float (input("Temperature value in degree Celsius: " ))  
+Fahrenheit_2 = (celsius_2 * 9/5) + 32  
+    
+# print the result  
+print ('The %.2f degree Celsius is equal to: %.2f Fahrenheit'  
+        %(celsius_2, Fahrenheit_2))</code></pre>
+            </li>
+            <li><b>Python program to display calendar</b>
+                <pre class="language-python"><code>import calendar  
+# Enter the month and year  
+yy = int(input("Enter year: "))  
+mm = int(input("Enter month: "))  
+    
+# display the calendar  
+print(calendar.month(yy,mm))</code></pre>
+            </li>
+            <li><b>Python Program to Check if a Number is Positive, Negative or Zero</b>
+                <pre class="language-python"><code># Default function to run if else condition  
+def NumberCheck(a):   
+# Checking if the number is positive  
+if a > 0:   
+    print("Number given by you is Positive")   
+# Checking if the number is negative   
+elif a < 0:   
+    print("Number given by you is Negative")   
+# Else the number is zero  
+else:   
+    print("Number given by you is zero")  
+# Taking number from user  
+a = float(input("Enter a number as input value: "))  
+# Printing result  
+NumberCheck(a)</code></pre>
+            </li>
+            <li><b>Python Program to Check if a Number is Odd or Even</b>
+                <pre class="language-python"><code>num = int(input("Enter a number: "))  
+if (num % 2) == 0:  
+    print("{0} is Even number".format(num))  
+else:  
+    print("{0} is Odd number".format(num))</code></pre>
+            </li>
+            <li><b>Python Program to Check Leap Year</b>
+                <pre class="language-python"><code># Default function to implement conditions to check leap year  
+def CheckLeap(Year):  
+    # Checking if the given year is leap year  
+    if((Year % 400 == 0) or  
+        (Year % 100 != 0) and  
+        (Year % 4 == 0)):   
+    print("Given Year is a leap Year");  
+    # Else it is not a leap year  
+    else:  
+    print ("Given Year is not a leap Year")  
+# Taking an input year from user  
+Year = int(input("Enter the number: "))  
+# Printing result  
+CheckLeap(Year)</code></pre>
+            </li>
+            <li><b>Python Program to Check Prime Number</b>
+                <pre class="language-python"><code># A default function for Prime checking conditions  
+def PrimeChecker(a):  
+    # Checking that given number is more than 1  
+    if a > 1:  
+        # Iterating over the given number with for loop  
+        for j in range(2, int(a/2) + 1):  
+            # If the given number is divisible or not  
+            if (a % j) == 0:  
+                print(a, "is not a prime number")  
+                break  
+        # Else it is a prime number  
+        else:  
+            print(a, "is a prime number")  
+    # If the given number is 1  
+    else:  
+        print(a, "is not a prime number")  
+# Taking an input number from the user  
+a = int(input("Enter an input number:"))  
+# Printing result  
+PrimeChecker(a)</code></pre>
+            </li>
+            <li><b>Python Program to Print all Prime Numbers in an Interval</b>
+                <pre class="language-python"><code>#Take the input from the user:   
+lower = int(input("Enter lower range: "))  
+upper = int(input("Enter upper range: "))  
+    
+for num in range(lower,upper + 1):  
+    if num > 1:  
+        for i in range(2,num):  
+            if (num % i) == 0:  
+                break  
+        else:  
+            print(num)</code></pre>
+            </li>
+            <li><b>Python Program to Find the Factorial of a Number</b>
+                <pre class="language-python"><code>num = int(input("Enter a number: "))    
+factorial = 1    
+if num < 0:    
+    print(" Factorial does not exist for negative numbers")    
+elif num == 0:    
+    print("The factorial of 0 is 1")    
+else:    
+    for i in range(1,num + 1):    
+        factorial = factorial*i    
+    print("The factorial of",num,"is",factorial)</code></pre>
+            </li>
+            <li><b>Python Program to Display the multiplication Table</b>
+                <pre class="language-python"><code>number = int(input ("Enter the number of which the user wants to print the multiplication table: "))      
+# We are using "for loop" to iterate the multiplication 10 times       
+print ("The Multiplication Table of: ", number)    
+for count in range(1, 11):      
+    print (number, 'x', count, '=', number * count)</code></pre>
+            </li>
+            <li><b>Python Program to Print the Fibonacci sequence</b>
+                <pre class="language-python"><code>n_terms = int(input ("How many terms the user wants to print? "))  
+  
+# First two terms  
+n_1 = 0  
+n_2 = 1  
+count = 0  
+    
+# Now, we will check if the number of terms is valid or not  
+if n_terms <= 0:  
+    print ("Please enter a positive integer, the given number is not valid")  
+# if there is only one term, it will return n_1  
+elif n_terms == 1:  
+    print ("The Fibonacci sequence of the numbers up to", n_terms, ": ")  
+    print(n_1)  
+# Then we will generate Fibonacci sequence of number  
+else:  
+    print ("The fibonacci sequence of the numbers is:")  
+    while count < n_terms:  
+        print(n_1)  
+        nth = n_1 + n_2  
+        # At last, we will update values  
+        n_1 = n_2  
+        n_2 = nth  
+        count += 1</code></pre>
+            </li>
+            <li><b>Python Program to Check Armstrong Number</b>
+                <pre class="language-python"><code>Input:  407  
+Output: Yes, 407 is an Armstrong number  
+Solution:  
+(4 * 4 * 4) + (0 * 0 * 0) + (7 * 7 * 7) = 407   
+Input:  1634  
+Output: Yes, 1634 is an Armstrong number  
+Solution:  
+(1 * 1 * 1) + (6 * 6 * 6) + (3 * 3 * 3) + (4* 4 * 4) = 1634  
+Input:  253  
+Output: No, 253 is not an Armstrong number  
+Solution:  
+(2 * 2 * 2) + (5 * 5 * 5) + (3 * 3 * 3) = 160  
+Input:  1  
+Output: Yes, 1 is an Armstrong number  
+Solution:  
+(1* 1) = 1</code></pre>
+            </li>
+            <li><b>Python Program to Find Armstrong Number in an Interval</b>
+                <pre class="language-python"><code>lower = int(input("Enter lower range: "))  
+upper = int(input("Enter upper range: "))  
+    
+for num in range(lower,upper + 1):  
+    sum = 0  
+    temp = num  
+    while temp > 0:  
+        digit = temp % 10  
+        sum += digit ** 3  
+        temp //= 10  
+        if num == sum:  
+            print(num)</code></pre>
+            </li>
+            <li><b>Python Program to Find the Sum of Natural Numbers</b>
+                <pre class="language-python"><code>num = int(input("Enter a number: "))  
+  
+if num < 0:  
+    print("Enter a positive number")  
+else:  
+    sum = 0  
+    # use while loop to iterate un till zero  
+    while(num > 0):  
+        sum += num  
+        num -= 1  
+    print("The sum is",sum)</code></pre>
+            </li>
+
+           
+            <h2 style="color: brown;">Python Function Program</h2>
+            <hr>
+            <hr>
+
+            <li><b>Python Program to Find LCM!</b>
+                <pre class="language-python"><code># defining a function to calculate LCM  
+def calculate_lcm(x, y):  
+    # selecting the greater number  
+    if x > y:  
+        greater = x  
+    else:  
+        greater = y  
+    while(True):  
+        if((greater % x == 0) and (greater % y == 0)):  
+            lcm = greater  
+            break  
+        greater += 1  
+    return lcm    
+    
+# taking input from users  
+num1 = int(input("Enter first number: "))  
+num2 = int(input("Enter second number: "))  
+# printing the result for the users  
+print("The L.C.M. of", num1,"and", num2,"is", calculate_lcm(num1, num2))</code></pre>
+            </li>
+            <li><b>Python Program to Find HCF</b>
+                <pre class="language-python"><code># defining a function to calculate HCF  
+def calculate_hcf(x, y):  
+    # selecting the smaller number  
+    if x > y:  
+        smaller = y  
+    else:  
+        smaller = x  
+    for i in range(1,smaller + 1):  
+        if((x % i == 0) and (y % i == 0)):  
+            hcf = i  
+    return hcf  
+    
+# taking input from users  
+num1 = int(input("Enter first number: "))  
+num2 = int(input("Enter second number: "))  
+# printing the result for the users  
+print("The H.C.F. of", num1,"and", num2,"is", calculate_hcf(num1, num2))</code></pre>
+            </li>
+            <li><b>Python Program to Convert Decimal to Binary, Octal and Hexadecimal</b>
+                <pre class="language-python"><code># First, we will define the function to convert decimal to binary  
+def decimal_into_binary(decimal_1):  
+    decimal = int(decimal_1)  
+    
+    # then, print the equivalent decimal  
+    print ("The given decimal number", decimal, "in Binary number is: ", bin(decimal))  
+# we will define the function to convert decimal to octal  
+def decimal_into_octal(decimal_1):  
+    decimal = int(decimal_1)  
+    
+    # Then, print the equivalent decimal  
+    print ("The given decimal number", decimal, "in Octal number is: ", oct(decimal))  
+# we will define the function to convert decimal to hexadecimal  
+def decimal_into_hexadecimal(decimal_1):  
+    decimal = int(decimal_1)  
+    
+    # Then, print the equivalent decimal  
+    print ("The given decimal number", decimal, " in Hexadecimal number is: ", hex(decimal))  
+    
+# Driver program  
+decimal_1 = int (input (" Enter the Decimal Number: "))  
+decimal_into_binary(decimal_1)  
+decimal_into_octal(decimal_1)  
+decimal_into_hexadecimal(decimal_1)</code></pre>
+            </li>
+            <li><b>Python Program To Find ASCII value of a character</b>
+                <pre class="language-python"><code>print ("Please enter the String: ", end = "")  
+string = input()  
+string_length = len(string)  
+for K in string:  
+    ASCII = ord(K)  
+    print (K, "\t", ASCII)</code></pre>
+            </li>
+            <li><b>Python Program to Make a Simple Calculator</b>
+                <pre class="language-python"><code>def add(P, Q):    
+# This function is used for adding two numbers   
+return P + Q   
+def subtract(P, Q):   
+# This function is used for subtracting two numbers   
+return P - Q   
+def multiply(P, Q):   
+# This function is used for multiplying two numbers   
+return P * Q   
+def divide(P, Q):   
+# This function is used for dividing two numbers    
+return P / Q    
+# Now we will take inputs from the user    
+print ("Please select the operation.")    
+print ("a. Add")    
+print ("b. Subtract")    
+print ("c. Multiply")    
+print ("d. Divide")    
+    
+choice = input("Please enter choice (a/ b/ c/ d): ")    
+    
+num_1 = int (input ("Please enter the first number: "))    
+num_2 = int (input ("Please enter the second number: "))    
+    
+if choice == 'a':    
+print (num_1, " + ", num_2, " = ", add(num_1, num_2))    
+    
+elif choice == 'b':    
+print (num_1, " - ", num_2, " = ", subtract(num_1, num_2))    
+    
+elif choice == 'c':    
+print (num1, " * ", num2, " = ", multiply(num1, num2))    
+elif choice == 'd':    
+print (num_1, " / ", num_2, " = ", divide(num_1, num_2))    
+else:    
+print ("This is an invalid input")</code></pre>
+            </li>
+            <li><b>Python Program to Display Calendar</b>
+                <pre class="language-python"><code># First import the calendar module  
+import calendar  
+# ask of month and year  
+yy = int(input("Enter year: "))  
+mm = int(input("Enter month: "))  
+# display the calendar  
+print(calendar.month(yy,mm))</code></pre>
+            </li>
+            <li><b>Python Program to Display Fibonacci Sequence Using Recursion</b>
+                <pre class="language-python"><code>def recur_fibo(n):  
+if n <= 1:  
+    return n  
+else:  
+    return(recur_fibo(n-1) + recur_fibo(n-2))  
+# take input from the user  
+nterms = int(input("How many terms? "))  
+# check if the number of terms is valid  
+if nterms <= 0:  
+print("Plese enter a positive integer")  
+else:  
+print("Fibonacci sequence:")  
+for i in range(nterms):  
+    print(recur_fibo(i))</code></pre>
+            </li>
+            <li><b>Python Program to Find Factorial of Number Using Recursion</b>
+                <pre class="language-python"><code>def recur_factorial(n):  
+if n == 1:  
+    return n  
+else:  
+    return n*recur_factorial(n-1)  
+# take input from the user  
+num = int(input("Enter a number: "))  
+# check is the number is negative  
+if num < 0:  
+print("Sorry, factorial does not exist for negative numbers")  
+elif num == 0:  
+print("The factorial of 0 is 1")  
+else:  
+print("The factorial of",num,"is",recur_factorial(num))</code></pre>
+            </li>
+            <h2 style="color: brown; ">Python Number Program</h2>
+            <hr>
+            <hr>
+            <li><b>Python program to check if the given number is a Disarium Number</b>
+                <pre class="language-python"><code>#calculateLength() will count the digits present in a number    
+def calculateLength(n):    
+    length = 0;    
+    while(n != 0):    
+        length = length + 1;    
+        n = n//10;    
+    return length;    
+        
+num = 175;    
+rem = sum = 0;    
+len = calculateLength(num);    
+        
+#Makes a copy of the original number num    
+n = num;    
+        
+#Calculates the sum of digits powered with their respective position    
+while(num > 0):    
+    rem = num%10;    
+    sum = sum + int(rem**len);    
+    num = num//10;    
+    len = len - 1;    
+        
+#Checks whether the sum is equal to the number itself    
+if(sum == n):    
+    print(str(n) + " is a disarium number");    
+else:    
+    print(str(n) + " is not a disarium number");</code></pre>
+            </li>
+            <li><b>Python program to print all disarium numbers between 1 to 100</b>
+                <pre class="language-python"><code>#calculateLength() will count the digits present in a number    
+def calculateLength(n):    
+    length = 0;    
+    while(n != 0):    
+        length = length + 1;    
+        n = n//10;    
+    return length;    
+        
+#sumOfDigits() will calculates the sum of digits powered with their respective position    
+def sumOfDigits(num):    
+    rem = sum = 0;    
+    len = calculateLength(num);    
+        
+    while(num > 0):    
+        rem = num%10;    
+        sum = sum + (rem**len);    
+        num = num//10;    
+        len = len - 1;    
+    return sum;    
+        
+result = 0;    
+        
+#Displays all disarium numbers between 1 and 100    
+print("Disarium numbers between 1 and 100 are");    
+for i in range(1, 101):    
+    result = sumOfDigits(i);    
+        
+    if(result == i):    
+        print(i)</code></pre>
+            </li>
+            <li><b>Python program to check if the given number is Happy Number</b>
+                <pre class="language-python"><code>#isHappyNumber() will determine whether a number is happy or not    
+def isHappyNumber(num):    
+    rem = sum = 0;    
+        
+    #Calculates the sum of squares of digits    
+    while(num > 0):    
+        rem = num%10;    
+        sum = sum + (rem*rem);    
+        num = num//10;    
+    return sum;    
+        
+num = 82;    
+result = num;    
+        
+while(result != 1 and result != 4):    
+    result = isHappyNumber(result);    
+        
+#Happy number always ends with 1    
+if(result == 1):    
+    print(str(num) + " is a happy number");    
+#Unhappy number ends in a cycle of repeating numbers which contain 4    
+elif(result == 4):    
+    print(str(num) + " is not a happy number");</code></pre>
+            </li>
+            <li><b>Python program to print all happy numbers between 1 and 100</b>
+                <pre class="language-python"><code>#isHappyNumber() will determine whether a number is happy or not    
+def isHappyNumber(num):    
+    rem = sum = 0;    
+        
+    #Calculates the sum of squares of digits    
+    while(num > 0):    
+        rem = num%10;    
+        sum = sum + (rem*rem);    
+        num = num//10;    
+    return sum;    
+            
+#Displays all happy numbers between 1 and 100    
+print("List of happy numbers between 1 and 100: ");    
+for i in range(1, 101):    
+    result = i;    
+        
+    #Happy number always ends with 1 and     
+    #unhappy number ends in a cycle of repeating numbers which contains 4    
+    while(result != 1 and result != 4):    
+        result = isHappyNumber(result);    
+        
+    if(result == 1):    
+        print(i),    
+        print(" ")</code></pre>
+            </li>
+            <li><b>Python program to determine whether the given number is a Harshad Number</b>
+                <pre class="language-python"><code>num = 156;    
+rem = sum = 0;    
+        
+#Make a copy of num and store it in variable n    
+n = num;    
+        
+#Calculates sum of digits    
+while(num > 0):    
+    rem = num%10;    
+    sum = sum + rem;    
+    num = num//10;    
+        
+#Checks whether the number is divisible by the sum of digits    
+if(n%sum == 0):    
+    print(str(n) + " is a harshad number");    
+else:    
+    print(str(n) + " is not a harshad number");</code></pre>
+            </li>
+            <li><b>Python program to print all pronic numbers between 1 and 100</b>
+                <pre class="language-python"><code>#isPronicNumber() will determine whether a given number is a pronic number or not    
+def isPronicNumber(num):    
+    flag = False;    
+        
+    for j in range(1, num+1):    
+        #Checks for pronic number by multiplying consecutive numbers    
+        if((j*(j+1)) == num):    
+            flag = True;    
+            break;    
+    return flag;    
+        
+#Displays pronic numbers between 1 and 100    
+print("Pronic numbers between 1 and 100: ");    
+for i in range(1, 101):    
+    if(isPronicNumber(i)):    
+        print(i),    
+        print(" ")</code></pre>
+            </li>
+            <h2 style="color: brown; ">Python Array Program</h2>
+            <hr>
+            <hr>
+            <li><b>Python program to copy all elements of one array into another array</b>
+                <pre class="language-python"><code>#Initialize array     
+arr1 = [1, 2, 3, 4, 5];     
+        
+#Create another array arr2 with size of arr1    
+arr2 = [None] * len(arr1);    
+        
+#Copying all elements of one array into another    
+for i in range(0, len(arr1)):    
+    arr2[i] = arr1[i];     
+        
+#Displaying elements of array arr1     
+print("Elements of original array: ");    
+for i in range(0, len(arr1)):    
+    print(arr1[i]),    
+        
+print();    
+        
+#Displaying elements of array arr2     
+print("Elements of new array: ");    
+for i in range(0, len(arr2)):    
+    print(arr2[i])</code></pre>
+            </li>
+            <li><b>Python program to left rotate the elements of an array</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [1, 2, 3, 4, 5];     
+#n determine the number of times an array should be rotated    
+n = 3;    
+        
+#Displays original array    
+print("Original array: ");    
+for i in range(0, len(arr)):    
+    print(arr[i]),     
+        
+#Rotate the given array by n times toward left    
+for i in range(0, n):    
+    #Stores the first element of the array    
+    first = arr[0];    
+        
+    for j in range(0, len(arr)-1):    
+        #Shift element of array by one    
+        arr[j] = arr[j+1];    
+            
+    #First element of array will be added to the end    
+    arr[len(arr)-1] = first;    
+        
+print();    
+        
+#Displays resulting array after rotation    
+print("Array after left rotation: ");    
+for i in range(0, len(arr)):    
+    print(arr[i])</code></pre>
+            </li>
+            <li><b>Python program to print the duplicate elements of an array</b>
+                <pre class="language-python"><code>arr = [1, 2, 3, 4, 2, 7, 8, 8, 3];     
+print("Duplicate elements in given array: ");    
+#Searches for duplicate element    
+for i in range(0, len(arr)):    
+for j in range(i+1, len(arr)):    
+    if(arr[i] == arr[j]):    
+        print(arr[j]);</code></pre>
+            </li>
+            <li><b>Python program to print the elements of an array</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [1, 2, 3, 4, 5];     
+        
+print("Elements of given array: ");    
+#Loop through the array by incrementing the value of i     
+    
+for i in range(0, len(arr)):    
+    print(arr[i])</code></pre>
+            </li>
+            <li><b>Python program to print the elements of an array in reverse order</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [1, 2, 3, 4, 5];     
+print("Original array: ");    
+for i in range(0, len(arr)):    
+    print(arr[i]),     
+print("Array in reverse order: ");    
+#Loop through the array in reverse order    
+for i in range(len(arr)-1, -1, -1):     
+    print(arr[i])</code></pre>
+            </li>
+
+            <li><b>Python program to print the elements of an array present on even position</b>
+                <pre class="language-python"><code>p#Initialize array     
+arr = [1, 2, 3, 4, 5];     
+        
+print("Elements of given array present on even position: ");    
+#Loop through the array by incrementing the value of i by 2    
+    
+#Here, i will start from 1 as first even positioned element is present at position 1.    
+for i in range(1, len(arr), 2):    
+    print(arr[i]);</code></pre>
+            </li>
+            <li><b>Python program to print the elements of an array present on odd position</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [1, 2, 3, 4, 5];     
+        
+print("Elements of given array present on odd position: ");    
+#Loop through the array by incrementing the value of i by 2     
+    
+for i in range(0, len(arr), 2):    
+    print(arr[i]);     
+}</code></pre>
+            </li>
+            <li><b>Python program to print the largest element in an array</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [25, 11, 7, 75, 56];     
+        
+#Initialize max with first element of array.    
+max = arr[0];    
+        
+#Loop through the array    
+for i in range(0, len(arr)):    
+    #Compare elements of array with max    
+    if(arr[i] > max):    
+        max = arr[i];    
+            
+print("Largest element present in given array: " + str(max));</code></pre>
+            </li>
+            <li><b>Python program to print the smallest element in an array</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [25, 11, 7, 75, 56];     
+        
+#Initialize min with the first element of the array.    
+    
+min = arr[0];    
+        
+#Loop through the array    
+for i in range(0, len(arr)):    
+    #Compare elements of array with min    
+    if(arr[i] < min):    
+        min = arr[i];    
+        
+print("Smallest element present in given array: " + str(min));</code></pre>
+            </li>
+            <li><b>Python program to print the number of elements present in an array</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [1, 2, 3, 4, 5];     
+        
+#Number of elements present in an array can be found using len()    
+print("Number of elements present in given array: " + str(len(arr)));</code></pre>
+            </li>
+            <li><b>Python program to print the sum of all elements in an array</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [1, 2, 3, 4, 5];     
+sum = 0;    
+        
+#Loop through the array to calculate sum of elements    
+for i in range(0, len(arr)):    
+    sum = sum + arr[i];    
+        
+print("Sum of all the elements of an array: " + str(sum));</code></pre>
+            </li>
+            <li><b>Python program to right rotate the elements of an array</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [1, 2, 3, 4, 5];     
+#n determine the number of times an array should be rotated    
+n = 3;    
+        
+#Displays original array    
+print("Original array: ");    
+for i in range(0, len(arr)):    
+    print(arr[i]),     
+        
+#Rotate the given array by n times toward right    
+for i in range(0, n):    
+    #Stores the last element of array    
+    last = arr[len(arr)-1];    
+        
+    for j in range(len(arr)-1, -1, -1):    
+        #Shift element of array by one    
+        arr[j] = arr[j-1];    
+            
+    #Last element of the array will be added to the start of the array.    
+    
+    arr[0] = last;    
+        
+print();    
+        
+#Displays resulting array after rotation    
+print("Array after right rotation: ");    
+for i in range(0, len(arr)):    
+    print(arr[i]);</code></pre>
+            </li>
+            <li><b>Python program to sort the elements of an array in ascending order</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [5, 2, 8, 7, 1];     
+temp = 0;    
+        
+#Displaying elements of original array    
+print("Elements of original array: ");    
+for i in range(0, len(arr)):    
+    print(arr[i], end=" ");    
+        
+#Sort the array in ascending order    
+for i in range(0, len(arr)):    
+    for j in range(i+1, len(arr)):    
+        if(arr[i] > arr[j]):    
+            temp = arr[i];    
+            arr[i] = arr[j];    
+            arr[j] = temp;    
+        
+print();    
+        
+#Displaying elements of the array after sorting    
+    
+print("Elements of array sorted in ascending order: ");    
+for i in range(0, len(arr)):    
+    print(arr[i], end=" ");</code></pre>
+            </li>
+            <li><b>Python program to sort the elements of an array in descending order</b>
+                <pre class="language-python"><code>#Initialize array     
+arr = [5, 2, 8, 7, 1];     
+temp = 0;    
+        
+#Displaying elements of original array    
+print("Elements of original array: ");    
+for i in range(0, len(arr)):     
+    print(arr[i]),    
+        
+#Sort the array in descending order    
+for i in range(0, len(arr)):    
+    for j in range(i+1, len(arr)):    
+        if(arr[i] < arr[j]):    
+            temp = arr[i];    
+            arr[i] = arr[j];    
+            arr[j] = temp;    
+        
+print();    
+        
+#Displaying elements of array after sorting    
+print("Elements of array sorted in descending order: ");    
+for i in range(0, len(arr)):     
+    print(arr[i]);</code></pre>
+            </li>
+            <h2 style="color: brown; ">Python Matrix Program</h2>
+            <hr>
+            <hr>
+            <li><b>Python Program to Add Two Matrices</b>
+                <pre class="language-python"><code>import string    
+import random # define the random module  
+S = 10  # number of characters in the string.  
+# call random.choices() string module to find the string in Uppercase + numeric data.  
+ran = ''.join(random.choices(string.ascii_uppercase + string.digits, k = S))    
+print("The randomly generated string is : " + str(ran)) # print the random data</code></pre>
+            </li>
+            <li><b>Python Program to Multiply Two Matrices</b>
+                <pre class="language-python"><code>
+# Define two matrix A and B in program  
+A = [[5, 4, 3],  
+        [2, 4, 6],  
+        [4, 7, 9]]    
+B = [[3, 2, 4],  
+        [4, 3, 6],  
+        [2, 7, 5]]   
+# Define an empty matrix to store multiplication result  
+multiResult = [[0, 0, 0],    
+                [0, 0, 0],    
+                [0, 0, 0]]  
+# Using nested for loop method on A & B matrix  
+for m in range(len(A)):    
+    for n in range(len(B[0])):    
+            for o in range(len(B)):    
+                multiResult[m][n] += A[m][o] * B[o][n] # Storing multiplication result in empty matrix  
+# Printing multiplication result in the output  
+print("The multiplication result of matrix A and B is: ")  
+for res in multiResult:    
+    print(res)</code></pre>
+            </li>
+            <li><b>Python Program to Transpose a Matrix</b>
+                <pre class="language-python"><code># Define a matrix A  
+A = [[5, 4, 3],  
+            [2, 4, 6],  
+            [4, 7, 9],  
+            [8, 1, 3]]  
+# Define an empty matrix of reverse order  
+transResult = [[0, 0, 0, 0],    
+                                [0, 0, 0, 0],  
+                                [0, 0, 0, 0]]  
+# Use nested for loop on matrix A  
+for a in range(len(A)):    
+    for b in range(len(A[0])):    
+            transResult[b][a] = A[a][b] # store transpose result on empty matrix          
+# Printing result in the output  
+print("The transpose of matrix A is: ")  
+for res in transResult:    
+    print(res)</code></pre>
+            </li>
+            <h2 style="color: brown; ">Python string Program</h2>
+            <hr>
+            <hr>
+            <li><b>Python Program to Sort Words in Alphabetic Order</b>
+                <pre class="language-python"><code>my_str = input("Enter a string: ")  
+# breakdown the string into a list of words  
+words = my_str.split()  
+# sort the list  
+words.sort()  
+# display the sorted words  
+for word in words:  
+    print(word)</code></pre>
+            </li>
+            <li><b>Python Program to Remove Punctuation From a String</b>
+                <pre class="language-python"><code># define punctuation  
+punctuation = '''''!()-[]{};:'"\,<>./?@#$%^&*_~'''  
+# take input from the user  
+my_str = input("Enter a string: ")  
+# remove punctuation from the string  
+no_punct = ""  
+for char in my_str:  
+    if char not in punctuation:  
+        no_punct = no_punct + char  
+# display the unpunctuated string  
+print(no_punct)</code></pre>
+            </li>
+            <li><b>Python Program to reverse a string</b>
+                <pre class="language-python"><code>def reverse_string(str):  
+    str1 = ""   # Declaring empty string to store the reversed string  
+    for i in str:  
+        str1 = i + str1  
+    return str1    # It will return the reverse string to the caller function  
+        
+str = "HelloWorld"    # Given String       
+print("The original string is: ",str)  
+print("The reverse string is",reverse_string(str)) # Function call</code></pre>
+            </li>
+            <li><b>Python Program to convert list to string</b>
+                <pre class="language-python"><code># List is converting into string  
+def convertList(list1):  
+    str = ''  # initializing the empty string  
+    
+    for i in list1: #Iterating and adding the list element to the str variable  
+        str += i  
+    
+    return str  
+    
+list1 = ["Hello"," My", " Name is ","Devansh"] #passing string   
+print(convertList(list1)) # Printin the converted string value</code></pre>
+            </li>
+            <li><b>Python Program to convert int to string</b>
+                <pre class="language-python"><code>n = 25  
+# check  and print type of num variable  
+print(type(n))  
+print(n)  
+    
+# convert the num into string  
+con_num = str(n)  
+    
+# check  and print type converted_num variable  
+print(type(con_num))  
+print(con_num)</code></pre>
+            </li>
+            <li><b>Python Program to concatenate two strings</b>
+                <pre class="language-python"><code># Python program to show  
+# string concatenation  
+    
+# Defining strings  
+str1 = "Hello "  
+str2 = "Devansh"  
+    
+# + Operator is used to strings concatenation  
+str3 = str1 + str2  
+print(str3)   # Printing the new combined string</code></pre>
+            </li>
+            <li><b>Python Program to generate a Random String</b>
+                <pre class="language-python"><code>import string    
+import random # define the random module  
+S = 10  # number of characters in the string.  
+# call random.choices() string module to find the string in Uppercase + numeric data.  
+ran = ''.join(random.choices(string.ascii_uppercase + string.digits, k = S))    
+print("The randomly generated string is : " + str(ran)) # print the random data</code></pre>
+            </li>
+            <li><b>Python Program to convert Bytes to string</b>
+                <pre class="language-python"><code>string1 = 'Welcome to JavaTpoint'  
+print(type(string1))  
+string2 = b'Welcome to JavaTpoint'  
+print(type(string2))</code></pre>
+            </li>
+            <h2 style="color: brown; ">Python List Program</h2>
+            <hr>
+            <hr>
+            <li><b>Python Program to append element in the list</b>
+                <pre class="language-python"><code>names = ["Joseph", "Peter", "Cook", "Tim"]  
+print('Current names List is:', names)  
+
+new_name = input("Please enter a name:\n")  
+names.append(new_name)  # Using the append() function  
+    
+print('Updated name List is:', names)</code></pre>
+            </li>
+            <li><b>Python Program to compare two lists</b>
+                <pre class="language-python"><code>list1 = [11, 12, 13, 14, 15]  
+list2 = [12, 13, 11, 15, 14]  
+    
+a = set(list1)  
+b = set(list2)  
+    
+if a == b:  
+    print("The list1 and list2 are equal")  
+else:  
+    print("The list1 and list2 are not equal")</code></pre>
+            </li>
+            <li><b>Python Program to convert list to dictionary</b>
+                <pre class="language-python"><code>student = ["James", "Abhinay", "Peter", "Bicky"]  
+student_dictionary = { stu : "Passed" for stu in student }  
+
+print(student_dictionary)</code></pre>
+            </li>
+            <li><b>Python Program to remove an element from a list</b>
+                <pre class="language-python"><code>list1 = ['Joseph', 'Bob', 'Charlie', 'Bob', 'Dave']  
+print("The list is: ", list1)  
+
+
+list1.remove('Bob')  
+print("After removing element: ",list1)</code></pre>
+            </li>
+            <li><b>Python Program to add two lists</b>
+                <pre class="language-python"><code>List1 = ["Rose", "Lotus", 24, "Gold", "USA" ] # define the list  
+# define the Department Dept2 list  
+Dept2 = ["Web Designing", 40, 20]  
+# define the HR_CS  
+HR_CS = [58, "Ms Wiley"]  
+List2 = [1, 2, 4, 5, 6] # integer list  
+print (" Display the List1", List1)  
+print (" Display the List2", List2)  
+print (" Display the Department List", Dept2)  
+print (" Display the CS Department ", HR_CS)</code></pre>
+            </li>
+            <li><b>Python Program to convert List to Set</b>
+                <pre class="language-python"><code># Creating a list of ten data elements  
+the_names = ["George", "Josh", "James", "Mark", "Carlo", "James", "Andy", "Sara", "Andy", "Victor"]  
+    
+# Converting the above list to the set  
+the_unique_names = set( the_names)  
+    
+# Printing the set to the users  
+print( the_unique_names)</code></pre>
+            </li>
+            <li><b>Python Program to convert list to string</b>
+                <pre class="language-python"><code>xample -
+# List is converting into string  
+def convertList(list1):  
+    str = ''  # initializing the empty string  
+    
+    for i in list1: #Iterating and adding the list element to the str variable  
+        str += i  
+    
+    return str  
+    
+list1 = ["Hello"," My", " Name is ","Devansh"] #passing string   
+print(convertList(list1)) # Printin the converted string value</code></pre>
+            </li>
+            <h2 style="color: brown; ">Python Dictionary Program</h2>
+            <hr>
+            <hr>
+            <li><b>Python Program to create a dictionary</b>
+                <pre class="language-python"><code>Student = {"Name": "John", "Age": 10, "Result":"Passed","Rollno":"009001"}  
+print(type(Student))  
+print("printing Employee data .... ")  
+print(Student)</code></pre>
+            </li>
+            <li><b>Python Program to convert list to dictionary</b>
+                <pre class="language-python"><code>student = ["James", "Abhinay", "Peter", "Bicky"]  
+student_dictionary = { stu : "Passed" for stu in student }  
+
+print(student_dictionary)</code></pre>
+            </li>
+            <li><b>Python Program to sort a dictionary</b>
+                <pre class="language-python"><code>names = {1:'Alice' ,2:'John' ,4:'Peter' ,3:'Andrew' ,6:'Ruffalo' ,5:'Chris' }  
+#print a sorted list of the keys  
+print(sorted(names.keys()))  
+#print the sorted list with items.  
+print(sorted(names.items()))</code></pre>
+            </li>
+            <li><b>Python Program to Merge two Dictionaries</b>
+                <pre class="language-python"><code>dict1 = { 'Alexandra' : 27,      # given the first dictionary in key-value pairs  
+        'Shelina Gomez' : 22,  
+        'James' : 29,  
+        'Peterson' : 30  
+                    }   
+dict2 = {  
+        'Jasmine' : 19,      # given the second dictionary in key-value pairs  
+        'Maria' : 26,  
+        'Helena' : 30  
+}                          
+print("Before merging the two dictionary ")  
+print("Dictionary No. 1 is : ", dict1) # print the dict1  
+print("Dictionary No. 1 is : ", dict2)  # print the dict2  
+
+dict3 = dict1.copy()  # Copy the dict1 into the dict3 using copy() method  
+
+for key, value in dict2.items():  # use for loop to iterate dict2 into the dict3 dictionary  
+dict3[key] = value  
+
+print("After merging of the two Dictionary ")  
+print(dict3)    # print the merge dictionary</code></pre>
+    </li>
+            
+
+            
+         
+
+        </ol>
+    </div>
+
+</body>
+
+</html>
